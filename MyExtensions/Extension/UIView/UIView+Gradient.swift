@@ -19,14 +19,7 @@ extension UIView {
         gradientLayer.frame = bounds
         gradientLayer.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
 
-        switch direction {
-        case .horizontal:
-            gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-            gradientLayer.endPoint = CGPoint(x: 1.0, y: 0)
-        case .vertical:
-            gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-            gradientLayer.endPoint = CGPoint(x: 0, y: 1.0)
-        }
+        applyDirection(gradientLayer: gradientLayer, direction: direction)
 
         layer.insertSublayer(gradientLayer, at: 0)
 
@@ -48,15 +41,7 @@ extension UIView {
         gradientLayer.colors = [UIColor.gray.withAlphaComponent(0.4).cgColor,
                                 UIColor.gray.withAlphaComponent(0).cgColor]
 
-        switch direction {
-        case .horizontal:
-            gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-            gradientLayer.endPoint = CGPoint(x: 1.0, y: 0)
-        case .vertical:
-            gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-            gradientLayer.endPoint = CGPoint(x: 0, y: 1.0)
-        }
-
+        applyDirection(gradientLayer: gradientLayer, direction: direction)
         layer.insertSublayer(gradientLayer, at: 0)
 
         // 各パーツに対する諸々
