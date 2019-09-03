@@ -84,6 +84,7 @@
 		DA23719022A6559D00BE7649 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA23718D22A6559D00BE7649 /* WKWebViewController.swift */; };
 		DA23719122A6559D00BE7649 /* NavTabScrollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA23718E22A6559D00BE7649 /* NavTabScrollController.swift */; };
 		DA23719222A6559D00BE7649 /* YoutubeUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA23718F22A6559D00BE7649 /* YoutubeUtility.swift */; };
+		DA6CF89B231E3503006D108F /* UITableViewCell+Separator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6CF89A231E3503006D108F /* UITableViewCell+Separator.swift */; };
 		EA4AB8B22232B0CE10B168B6 /* Pods_MyExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C61A125CE370FB5739588AEB /* Pods_MyExtensions.framework */; };
 /* End PBXBuildFile section */
 
@@ -171,6 +172,7 @@
 		DA23718D22A6559D00BE7649 /* WKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
 		DA23718E22A6559D00BE7649 /* NavTabScrollController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavTabScrollController.swift; sourceTree = "<group>"; };
 		DA23718F22A6559D00BE7649 /* YoutubeUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeUtility.swift; sourceTree = "<group>"; };
+		DA6CF89A231E3503006D108F /* UITableViewCell+Separator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Separator.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				DA23712422A6547B00BE7649 /* UITableView+Utility.swift */,
+				DA6CF89A231E3503006D108F /* UITableViewCell+Separator.swift */,
 			);
 			path = UITableView;
 			sourceTree = "<group>";
@@ -710,6 +713,7 @@
 				DA23715422A6547B00BE7649 /* CGSize+Utility.swift in Sources */,
 				DA23714622A6547B00BE7649 /* Operator+.swift in Sources */,
 				DA23713622A6547B00BE7649 /* ScopeMethod.swift in Sources */,
+				DA6CF89B231E3503006D108F /* UITableViewCell+Separator.swift in Sources */,
 				DA23714C22A6547B00BE7649 /* UIView+Fade.swift in Sources */,
 				DA23714722A6547B00BE7649 /* UIColor+.swift in Sources */,
 				DA23719222A6559D00BE7649 /* YoutubeUtility.swift in Sources */,
