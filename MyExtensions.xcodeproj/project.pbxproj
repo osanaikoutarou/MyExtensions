@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E17532022EFF4800032A342 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E17531F22EFF4800032A342 /* UIView+Gradient.swift */; };
 		1E805CAC22DC44EF00F49B8C /* LabelCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E805CAB22DC44EF00F49B8C /* LabelCreator.swift */; };
+		DA1FCE0A232763F3008D0472 /* WKWebViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1FCE09232763F3008D0472 /* WKWebViewManager.swift */; };
 		DA2370D122A6546400BE7649 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2370D022A6546400BE7649 /* AppDelegate.swift */; };
 		DA2370D322A6546400BE7649 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2370D222A6546400BE7649 /* ViewController.swift */; };
 		DA2370D622A6546400BE7649 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA2370D422A6546400BE7649 /* Main.storyboard */; };
@@ -94,6 +95,7 @@
 		4812BE3824C71D2005C2FF00 /* Pods-MyExtensions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyExtensions.debug.xcconfig"; path = "Target Support Files/Pods-MyExtensions/Pods-MyExtensions.debug.xcconfig"; sourceTree = "<group>"; };
 		C61A125CE370FB5739588AEB /* Pods_MyExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C803342B45F2EF7EAE712D2E /* Pods-MyExtensions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyExtensions.release.xcconfig"; path = "Target Support Files/Pods-MyExtensions/Pods-MyExtensions.release.xcconfig"; sourceTree = "<group>"; };
+		DA1FCE09232763F3008D0472 /* WKWebViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewManager.swift; sourceTree = "<group>"; };
 		DA2370CD22A6546400BE7649 /* MyExtensions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyExtensions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA2370D022A6546400BE7649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA2370D222A6546400BE7649 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -493,6 +495,7 @@
 				DA23718D22A6559D00BE7649 /* WKWebViewController.swift */,
 				DA23718F22A6559D00BE7649 /* YoutubeUtility.swift */,
 				1E805CAB22DC44EF00F49B8C /* LabelCreator.swift */,
+				DA1FCE09232763F3008D0472 /* WKWebViewManager.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -712,6 +715,7 @@
 				DA23716922A6547B00BE7649 /* UIStoryboardSegue+Utility.swift in Sources */,
 				DA23715422A6547B00BE7649 /* CGSize+Utility.swift in Sources */,
 				DA23714622A6547B00BE7649 /* Operator+.swift in Sources */,
+				DA1FCE0A232763F3008D0472 /* WKWebViewManager.swift in Sources */,
 				DA23713622A6547B00BE7649 /* ScopeMethod.swift in Sources */,
 				DA6CF89B231E3503006D108F /* UITableViewCell+Separator.swift in Sources */,
 				DA23714C22A6547B00BE7649 /* UIView+Fade.swift in Sources */,
