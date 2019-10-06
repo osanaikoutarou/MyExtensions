@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E167CF72349A2E10039D8FD /* CommonDialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E167CF62349A2E10039D8FD /* CommonDialog.storyboard */; };
+		1E167CF92349A3E30039D8FD /* CommonDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E167CF82349A3E30039D8FD /* CommonDialogViewController.swift */; };
 		1E17532022EFF4800032A342 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E17531F22EFF4800032A342 /* UIView+Gradient.swift */; };
+		1E38FF21231B8FFB00360083 /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38FF20231B8FFB00360083 /* CustomAlertViewController.swift */; };
 		1E805CAC22DC44EF00F49B8C /* LabelCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E805CAB22DC44EF00F49B8C /* LabelCreator.swift */; };
 		DA2370D122A6546400BE7649 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2370D022A6546400BE7649 /* AppDelegate.swift */; };
 		DA2370D322A6546400BE7649 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2370D222A6546400BE7649 /* ViewController.swift */; };
@@ -88,7 +91,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E167CF62349A2E10039D8FD /* CommonDialog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommonDialog.storyboard; sourceTree = "<group>"; };
+		1E167CF82349A3E30039D8FD /* CommonDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDialogViewController.swift; sourceTree = "<group>"; };
 		1E17531F22EFF4800032A342 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		1E38FF20231B8FFB00360083 /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
 		1E805CAB22DC44EF00F49B8C /* LabelCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCreator.swift; sourceTree = "<group>"; };
 		4812BE3824C71D2005C2FF00 /* Pods-MyExtensions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyExtensions.debug.xcconfig"; path = "Target Support Files/Pods-MyExtensions/Pods-MyExtensions.debug.xcconfig"; sourceTree = "<group>"; };
 		C61A125CE370FB5739588AEB /* Pods_MyExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +191,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E167CF52349A2CA0039D8FD /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				1E167CF62349A2E10039D8FD /* CommonDialog.storyboard */,
+				1E167CF82349A3E30039D8FD /* CommonDialogViewController.swift */,
+			);
+			path = Dialog;
+			sourceTree = "<group>";
+		};
 		1F2CF0D25E7FD23678A3FDEA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,10 +501,12 @@
 		DA23716A22A6548600BE7649 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				1E167CF52349A2CA0039D8FD /* Dialog */,
 				DA23718E22A6559D00BE7649 /* NavTabScrollController.swift */,
 				DA23718D22A6559D00BE7649 /* WKWebViewController.swift */,
 				DA23718F22A6559D00BE7649 /* YoutubeUtility.swift */,
 				1E805CAB22DC44EF00F49B8C /* LabelCreator.swift */,
+				1E38FF20231B8FFB00360083 /* CustomAlertViewController.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -601,6 +618,7 @@
 				DA2370DB22A6546500BE7649 /* LaunchScreen.storyboard in Resources */,
 				DA2370D822A6546500BE7649 /* Assets.xcassets in Resources */,
 				DA23718B22A654DB00BE7649 /* YoutubeView.xib in Resources */,
+				1E167CF72349A2E10039D8FD /* CommonDialog.storyboard in Resources */,
 				DA2370D622A6546400BE7649 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -688,6 +706,7 @@
 				DA23718A22A654DB00BE7649 /* CornerRaoundButtonView.swift in Sources */,
 				DA23714922A6547B00BE7649 /* UIVIew+Frame.swift in Sources */,
 				DA23718122A654DB00BE7649 /* PixcelHorizontalView.swift in Sources */,
+				1E167CF92349A3E30039D8FD /* CommonDialogViewController.swift in Sources */,
 				DA23715022A6547B00BE7649 /* Array+Utility.swift in Sources */,
 				DA23717E22A654DB00BE7649 /* NoPaddingTextView.swift in Sources */,
 				DA23715F22A6547B00BE7649 /* UIViewController+ActionSheet.swift in Sources */,
@@ -717,6 +736,7 @@
 				DA23715822A6547B00BE7649 /* UICollectionViewFlowLayout+Paging.swift in Sources */,
 				DA23716722A6547B00BE7649 /* String+Utility.swift in Sources */,
 				DA23716322A6547B00BE7649 /* UIControl+Action.swift in Sources */,
+				1E38FF21231B8FFB00360083 /* CustomAlertViewController.swift in Sources */,
 				DA23715222A6547B00BE7649 /* UIStoryboard+Utility.swift in Sources */,
 				DA23714E22A6547B00BE7649 /* UIView+Form.swift in Sources */,
 				DA23719022A6559D00BE7649 /* WKWebViewController.swift in Sources */,
