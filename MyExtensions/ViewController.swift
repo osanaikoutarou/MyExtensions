@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         label.backgroundColor = .white
         let a = CommonDialogViewController.create(innerView: label)
         self.present(a, animated: true, completion: nil)
+        view.viewController
     }
 
 

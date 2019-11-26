@@ -37,7 +37,7 @@ import WebKit
     typealias DecidePolicyForNavigationActionClosure = ((_ wkWebView: WKWebView, _ navigationAction: WKNavigationAction) -> WKNavigationActionPolicy)
     typealias DecidePolicyForNavigationResponseClosure = ((_ wkWebView: WKWebView, _ navigationResponse: WKNavigationResponse) -> WKNavigationResponsePolicy)
     typealias WKNavigationClosure = ((_ wkWebView: WKWebView, _ navigation: WKNavigation) -> Void)
-    typealias DidFailNavigationClosure = ((_ wkWebView: WKWebView, _ navigation: WKNavigation, _ error: Error) -> Void)
+    typealias WKNavigationFailClosure = ((_ wkWebView: WKWebView, _ navigation: WKNavigation, _ error: Error) -> Void)
     typealias DidReceiveChallengeClosure = ((_ wkWebView: WKWebView, _ challenge: URLAuthenticationChallenge, _ completionHandler: ((URLSession.AuthChallengeDisposition, URLCredential?) -> Void)?) -> Void)
 
     var decidePolicyForNavigationAction: DecidePolicyForNavigationActionClosure?
@@ -45,9 +45,9 @@ import WebKit
     var didStartProvisionalNavigation: WKNavigationClosure?
     var didCommitNavigation: WKNavigationClosure?
     var didFinishNavigation: WKNavigationClosure?
-    var didFailProvisionalNavigation: WKNavigationClosure?
+    var didFailProvisionalNavigation: WKNavigationFailClosure?
     var didReceiveServerRedirectForProvisionalNavigation: WKNavigationClosure?
-    var didFailNavigation: DidFailNavigationClosure?
+    var didFailNavigation: WKNavigationFailClosure?
     var didReceiveChallenge: DidReceiveChallengeClosure?
 
     // NSKeyValueObserving用
@@ -141,7 +141,7 @@ extension WKWebViewManager: WKNavigationDelegate {
 
     /// ページの読み込み失敗
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-        didFailProvisionalNavigation?(wkWebView, navigation)
+        didFailProvisionalNavigation?(wkWebView, navigation, error)
     }
 
     /// 表示中にリダイレクトがあった
@@ -156,9 +156,13 @@ extension WKWebViewManager: WKNavigationDelegate {
 
     /// 認証チャレンジに応答する必要があるときに呼び出される
     func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-        didReceiveChallenge?(wkWebView, challenge, completionHandler)
+        if let didReceiveChallenge = didReceiveChallenge {
+            didReceiveChallenge(wkWebView, challenge, completionHandler)
+        }
+        else {
+            completionHandler(URLSession.AuthChallengeDisposition.performDefaultHandling, nil)
+        }
     }
-
 }
 
 extension WKWebViewManager {
@@ -167,14 +171,14 @@ extension WKWebViewManager {
                didStartProvisionalNavigation: WKNavigationClosure? = nil,
                didCommitNavigation: WKNavigationClosure? = nil,
                didFinishNavigation: WKNavigationClosure? = nil,
-               didFailProvisionalNavigation: WKNavigationClosure? = nil,
+               didFailProvisionalNavigation: WKNavigationFailClosure? = nil,
                didReceiveServerRedirectForProvisionalNavigation: WKNavigationClosure? = nil,
                didChangeEstimatedProgress: DidChangeEstimatedProgressClosure? = nil,
                didChangeTitle: DidChangeTitleClosure? = nil,
                didChangeLoading: DidChangeLoadingClosure? = nil,
                didChangeCanGoBack: DidChangeCanGoBackClosure? = nil,
                didChangeCanGoForward: DidChangeCanGoForwardClosure? = nil,
-               didFailNavigation: DidFailNavigationClosure? = nil,
+               didFailNavigation: WKNavigationFailClosure? = nil,
                didReceiveChallenge: DidReceiveChallengeClosure? = nil) {
         self.decidePolicyForNavigationAction = decidePolicyForNavigationAction
         self.decidePolicyForNavigationResponse = decidePolicyForNavigationResponse
