@@ -12,8 +12,18 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var gradientView: UIView!
 
+    @IBOutlet weak var pinkView: UIView!
+    @IBOutlet weak var blueView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let r = pinkView.unionFrames(otherView: blueView)
+        print(r)
     }
 
     @IBAction func tapped(_ sender: Any) {
@@ -23,6 +33,7 @@ class ViewController: UIViewController {
         let a = CommonDialogViewController.create(innerView: label)
         self.present(a, animated: true, completion: nil)
         view.viewController
+        
     }
 
 
