@@ -31,17 +31,18 @@ extension UIView {
 
 extension UIView {
     
-    func bindFrameToSuperviewBounds() {
+    func bindFrameToSuperviewBounds(margin: UIEdgeInsets = .zero) {
         guard let superview = self.superview else {
             print("Error! `superview` was nil – call `addSubview(view: UIView)` before calling `bindFrameToSuperviewBounds()` to fix this.")
             return
         }
         
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.topAnchor.constraint(equalTo: superview.topAnchor, constant: 0).isActive = true
-        self.bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: 0).isActive = true
-        self.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 0).isActive = true
-        self.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: 0).isActive = true
+        self.topAnchor.constraint(equalTo: superview.topAnchor, constant: margin.top).isActive = true
+        self.bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: margin.bottom).isActive = true
+        self.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: margin.left).isActive = true
+        self.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: margin.right).isActive = true
         
     }
+    
 }
