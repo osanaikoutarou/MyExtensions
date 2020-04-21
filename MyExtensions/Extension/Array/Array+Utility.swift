@@ -22,13 +22,8 @@ extension Array where Element: Equatable {
 }
 
 extension Array {
-    init(reserveCapacity: Int) {
-        self = Array<Element>()
-        self.reserveCapacity(reserveCapacity)
-    }
-    
     /// スライス
-    var slice: ArraySlice<Element> {
-        self[self.startIndex ..< self.endIndex]
+    func slice(_ i: Int) -> Array<Element> {
+        return Array(self.prefix(i))
     }
 }
