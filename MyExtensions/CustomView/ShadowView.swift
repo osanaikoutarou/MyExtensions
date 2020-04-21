@@ -25,14 +25,14 @@ class ShadowView: UIView {
                    cornerRadius:CGFloat) {
         
         backgroundColor = .white
-        layer.cornerRadius = cornerRadius
-        layer.shadowColor = shadowColor.cgColor
-        layer.shadowOpacity = shadowOpacity
-        layer.shadowOffset = shadowOffset
-        layer.shadowRadius = shadowRadius
-        layer.masksToBounds = false
-        layer.shouldRasterize = true
-        layer.rasterizationScale = UIScreen.main.scale
+        layer.cornerRadius = cornerRadius                  // 影
+        layer.shadowColor = shadowColor.cgColor            // 影の色
+        layer.shadowOpacity = shadowOpacity                // 影の透明度
+        layer.shadowOffset = shadowOffset                  // 影の位置
+        layer.shadowRadius = shadowRadius                  // 影の半径
+        layer.masksToBounds = false                        //
+        layer.shouldRasterize = true                       //
+        layer.rasterizationScale = UIScreen.main.scale     //
         
         self.cornerRadiusSave = cornerRadius
     }

@@ -5,12 +5,12 @@ DEPENDENCIES:
   - Kingfisher (~> 4.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Kingfisher
 
 SPEC CHECKSUMS:
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
 
-PODFILE CHECKSUM: 1de3b182fe0c31ed2179b0947ed788c93c271994
+PODFILE CHECKSUM: 9dcb1e0a3b359d6a953fb3d8767677b94ad6f61a
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.4
