@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension UIView {
     /// selfの座標系に対して、otherViewのframeとの被る部分を返す

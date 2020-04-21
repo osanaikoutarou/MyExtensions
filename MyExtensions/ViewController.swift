@@ -22,8 +22,8 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let r = pinkView.unionFrames(otherView: blueView)
-        print(r)
+//        let r = pinkView.unionFrames(otherView: blueView)
+//        print(r)
     }
 
     @IBAction func tapped(_ sender: Any) {

@@ -20,3 +20,15 @@ extension Array where Element: Equatable {
         self = result
     }
 }
+
+extension Array {
+    init(reserveCapacity: Int) {
+        self = Array<Element>()
+        self.reserveCapacity(reserveCapacity)
+    }
+    
+    /// スライス
+    var slice: ArraySlice<Element> {
+        self[self.startIndex ..< self.endIndex]
+    }
+}
