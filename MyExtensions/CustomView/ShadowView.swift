@@ -36,4 +36,14 @@ class ShadowView: UIView {
         
         self.cornerRadiusSave = cornerRadius
     }
+    
+    func addShadowExample() {
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOpacity = shadowOpacity                // 影の透明度
+        view.layer.shadowOffset = shadowOffset                  // 影の位置
+        view.layer.shadowRadius = shadowRadius                  // 影の半径
+        view.layer.masksToBounds = false                        //
+        view.layer.shouldRasterize = true                       //
+        view.layer.rasterizationScale = UIScreen.main.scale
+    }
 }

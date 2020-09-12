@@ -66,6 +66,7 @@ import WebKit
         self.wkWebView = wkWebView
         super.init()
         self.wkWebView.navigationDelegate = self
+        self.wkWebView.uiDelegate = self
         addObservers()
     }
 
@@ -162,6 +163,21 @@ extension WKWebViewManager: WKNavigationDelegate {
         else {
             completionHandler(URLSession.AuthChallengeDisposition.performDefaultHandling, nil)
         }
+    }
+}
+
+extension WKWebViewManager: WKUIDelegate {
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        // 新しいウィンドウで開くものをそのまま遷移させる
+        guard let url = navigationAction.request.url else {
+            return nil
+        }
+
+        guard let targetFrame = navigationAction.targetFrame, targetFrame.isMainFrame else {
+            webView.load(URLRequest(url: url))
+            return nil
+        }
+        return nil
     }
 }
 
