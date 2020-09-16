@@ -11,6 +11,7 @@
 		1E167CF92349A3E30039D8FD /* CommonDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E167CF82349A3E30039D8FD /* CommonDialogViewController.swift */; };
 		1E17532022EFF4800032A342 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E17531F22EFF4800032A342 /* UIView+Gradient.swift */; };
 		1E38FF21231B8FFB00360083 /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38FF20231B8FFB00360083 /* CustomAlertViewController.swift */; };
+		1E6AA4282511C3C20013A084 /* AppearanceUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6AA4272511C3C20013A084 /* AppearanceUtility.swift */; };
 		1E805CAC22DC44EF00F49B8C /* LabelCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E805CAB22DC44EF00F49B8C /* LabelCreator.swift */; };
 		1E8AE5D3239F9F5F008A7799 /* UIView+Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8AE5D2239F9F5F008A7799 /* UIView+Rect.swift */; };
 		DA1FCE0A232763F3008D0472 /* WKWebViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1FCE09232763F3008D0472 /* WKWebViewManager.swift */; };
@@ -98,6 +99,7 @@
 		1E167CF82349A3E30039D8FD /* CommonDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDialogViewController.swift; sourceTree = "<group>"; };
 		1E17531F22EFF4800032A342 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		1E38FF20231B8FFB00360083 /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
+		1E6AA4272511C3C20013A084 /* AppearanceUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceUtility.swift; sourceTree = "<group>"; };
 		1E805CAB22DC44EF00F49B8C /* LabelCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCreator.swift; sourceTree = "<group>"; };
 		1E8AE5D2239F9F5F008A7799 /* UIView+Rect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rect.swift"; sourceTree = "<group>"; };
 		4812BE3824C71D2005C2FF00 /* Pods-MyExtensions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyExtensions.debug.xcconfig"; path = "Target Support Files/Pods-MyExtensions/Pods-MyExtensions.debug.xcconfig"; sourceTree = "<group>"; };
@@ -516,6 +518,7 @@
 				1E805CAB22DC44EF00F49B8C /* LabelCreator.swift */,
 				1E38FF20231B8FFB00360083 /* CustomAlertViewController.swift */,
 				DA1FCE09232763F3008D0472 /* WKWebViewManager.swift */,
+				1E6AA4272511C3C20013A084 /* AppearanceUtility.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -740,6 +743,7 @@
 				DA23714722A6547B00BE7649 /* UIColor+.swift in Sources */,
 				DA23719222A6559D00BE7649 /* YoutubeUtility.swift in Sources */,
 				DA23714322A6547B00BE7649 /* UITableView+.swift in Sources */,
+				1E6AA4282511C3C20013A084 /* AppearanceUtility.swift in Sources */,
 				DA23715822A6547B00BE7649 /* UICollectionViewFlowLayout+Paging.swift in Sources */,
 				DA23716722A6547B00BE7649 /* String+Utility.swift in Sources */,
 				DA23716322A6547B00BE7649 /* UIControl+Action.swift in Sources */,
