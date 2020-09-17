@@ -36,3 +36,22 @@ extension UIScrollView {
         return CGPoint(x: horizontal, y: vertical)
     }
 }
+
+extension UIScrollView {
+    var isBoucing: Bool {
+        return isBoucingTop || isBouncingBottom
+    }
+    // scroll上限より上にスクロールしている
+    var isBoucingTop: Bool {
+        return (contentOffset.y + contentInset.top < 0)
+    }
+    // scroll下限より下にスクロールしている
+    var isBouncingBottom: Bool {
+        return contentOffset.y > contentSize.height - bounds.height + contentInset.bottom
+    }
+    // 最大のContentOffset
+    var maxContentOffset: CGPoint {
+        return CGPoint(x: max(contentSize.width - bounds.width + contentInset.right, 0),
+                       y: max(contentSize.height - bounds.height + contentInset.bottom, 0))
+    }
+}
