@@ -37,7 +37,6 @@ extension UIViewController {
 extension UIViewController {
     
     func dispAlertForDebug(message:String,okAction:@escaping AlertActioinClosure) {
-        return
-        dispAlert(message: message, okAction: okAction)
+        return dispAlert(message: message, okAction: okAction)
     }
 }

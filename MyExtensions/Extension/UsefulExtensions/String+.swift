@@ -8,23 +8,23 @@
 
 import Foundation
 
-public extension String {
-    public var localized: String {
+extension String {
+    var localized: String {
         return NSLocalizedString(self, comment: self)
     }
 
-    public func localized(withTableName tableName: String? = nil, bundle: Bundle = Bundle.main, value: String = "") -> String {
+    func localized(withTableName tableName: String? = nil, bundle: Bundle = Bundle.main, value: String = "") -> String {
         return NSLocalizedString(self, tableName: tableName, bundle: bundle, value: value, comment: self)
     }
 }
 
-public extension String {
-    public var url: URL? {
+extension String {
+    var url: URL? {
         return URL(string: self)
     }
 }
 
-public extension String {
+extension String {
     subscript (bounds: CountableClosedRange<Int>) -> String {
         let start = index(startIndex, offsetBy: bounds.lowerBound)
         let end = index(startIndex, offsetBy: bounds.upperBound)
@@ -53,12 +53,12 @@ public extension String {
     }
 }
 
-public extension String {
-    public var halfWidth: String {
+extension String {
+    var halfWidth: String {
         return transformFullWidthToHalfWidth(reverse: false)
     }
 
-    public var fullWidth: String {
+    var fullWidth: String {
         return transformFullWidthToHalfWidth(reverse: true)
     }
 

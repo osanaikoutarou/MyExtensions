@@ -8,8 +8,8 @@
 
 import UIKit
 
-public extension UIView {
-    public func fillSuperview() {
+extension UIView {
+    func fillSuperview() {
         guard let superview = self.superview else { return }
         translatesAutoresizingMaskIntoConstraints = superview.translatesAutoresizingMaskIntoConstraints
         if translatesAutoresizingMaskIntoConstraints {
@@ -23,7 +23,7 @@ public extension UIView {
         }
     }
 
-    public var viewController: UIViewController? {
+    var viewController: UIViewController? {
         var parent: UIResponder? = self
         while parent != nil {
             parent = parent?.next

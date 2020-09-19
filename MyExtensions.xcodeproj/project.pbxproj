@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E11EB7625145EA10094559F /* UIEdgeInsets+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E11EB7525145EA10094559F /* UIEdgeInsets+Utility.swift */; };
 		1E167CF72349A2E10039D8FD /* CommonDialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E167CF62349A2E10039D8FD /* CommonDialog.storyboard */; };
 		1E167CF92349A3E30039D8FD /* CommonDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E167CF82349A3E30039D8FD /* CommonDialogViewController.swift */; };
 		1E17532022EFF4800032A342 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E17531F22EFF4800032A342 /* UIView+Gradient.swift */; };
@@ -95,6 +96,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E11EB7525145EA10094559F /* UIEdgeInsets+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Utility.swift"; sourceTree = "<group>"; };
 		1E167CF62349A2E10039D8FD /* CommonDialog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommonDialog.storyboard; sourceTree = "<group>"; };
 		1E167CF82349A3E30039D8FD /* CommonDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDialogViewController.swift; sourceTree = "<group>"; };
 		1E17531F22EFF4800032A342 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
@@ -199,6 +201,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E11EB7425145E8F0094559F /* UIEdgeInsets */ = {
+			isa = PBXGroup;
+			children = (
+				1E11EB7525145EA10094559F /* UIEdgeInsets+Utility.swift */,
+			);
+			path = UIEdgeInsets;
+			sourceTree = "<group>";
+		};
 		1E167CF52349A2CA0039D8FD /* Dialog */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +264,7 @@
 		DA2370E222A6547A00BE7649 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				1E11EB7425145E8F0094559F /* UIEdgeInsets */,
 				DA2370E322A6547A00BE7649 /* UIScrollView */,
 				DA2370E522A6547A00BE7649 /* UIScreen */,
 				DA2370E722A6547A00BE7649 /* UIColor */,
@@ -761,6 +772,7 @@
 				DA23714222A6547B00BE7649 /* UIImage+.swift in Sources */,
 				DA23713C22A6547B00BE7649 /* TargetedExtension.swift in Sources */,
 				DA23715622A6547B00BE7649 /* UITextView+Utility.swift in Sources */,
+				1E11EB7625145EA10094559F /* UIEdgeInsets+Utility.swift in Sources */,
 				DA23715922A6547B00BE7649 /* Optional+Utility.swift in Sources */,
 				DA23713D22A6547B00BE7649 /* URL+.swift in Sources */,
 			);

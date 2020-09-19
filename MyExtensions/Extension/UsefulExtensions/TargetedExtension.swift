@@ -8,25 +8,25 @@
 
 import Foundation
 
-public struct TargetedExtension<Base> {
+struct TargetedExtension<Base> {
     let base: Base
     init (_ base: Base) {
         self.base = base
     }
 }
 
-public protocol TargetedExtensionCompatible {
+protocol TargetedExtensionCompatible {
     associatedtype Compatible
     static var ex: TargetedExtension<Compatible>.Type { get }
     var ex: TargetedExtension<Compatible> { get }
 }
 
-public extension TargetedExtensionCompatible {
-    public static var ex: TargetedExtension<Self>.Type {
+extension TargetedExtensionCompatible {
+    static var ex: TargetedExtension<Self>.Type {
         return TargetedExtension<Self>.self
     }
 
-    public var ex: TargetedExtension<Self> {
+    var ex: TargetedExtension<Self> {
         return TargetedExtension(self)
     }
 }

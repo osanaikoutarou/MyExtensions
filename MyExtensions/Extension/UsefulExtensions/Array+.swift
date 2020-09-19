@@ -8,28 +8,28 @@
 
 import Foundation
 
-public extension Array where Element: Equatable {
+extension Array where Element: Equatable {
     @discardableResult
-    public mutating func remove(_ element: Element) -> Index? {
+    mutating func remove(_ element: Element) -> Index? {
         guard let index = index(of: element) else { return nil }
         remove(at: index)
         return index
     }
 
     @discardableResult
-    public mutating func remove(_ elements: [Element]) -> [Index] {
-        return elements.flatMap { remove($0) }
+    mutating func remove(_ elements: [Element]) -> [Index] {
+        return elements.compactMap { remove($0) }
     }
 }
 
-public extension Array where Element: Hashable {
-    public mutating func unify() {
+extension Array where Element: Hashable {
+    mutating func unify() {
         self = unified()
     }
 }
 
-public extension Collection where Element: Hashable {
-    public func unified() -> [Element] {
+extension Collection where Element: Hashable {
+    func unified() -> [Element] {
         return reduce(into: []) {
             if !$0.contains($1) {
                 $0.append($1)
@@ -38,8 +38,8 @@ public extension Collection where Element: Hashable {
     }
 }
 
-public extension Collection {
-    public subscript(safe index: Index) -> Element? {
+extension Collection {
+    subscript(safe index: Index) -> Element? {
         return startIndex <= index && index < endIndex ? self[index] : nil
     }
 }
